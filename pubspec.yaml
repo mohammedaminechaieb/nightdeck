@@ -1,0 +1,31 @@
+name: nightdeck
+description: Ambient bedside lock screen — AMOLED clock, sleep sounds, reminders.
+publish_to: "none"
+version: 0.1.0
+
+environment:
+  sdk: ">=3.3.0 <4.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.6
+
+  audioplayers: ^6.0.0            # sleep sound mixer playback
+  flutter_local_notifications: ^17.2.1  # bedtime reminders
+  home_widget: ^0.6.0             # push clock/state to a real home/lock screen widget
+  shared_preferences: ^2.2.3      # persist mixer volumes, bedtime, chosen theme
+  wakelock_plus: ^1.2.5           # keep the ambient clock screen from sleeping
+  timezone: ^0.9.2                # required by flutter_local_notifications for scheduling
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^4.0.0
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/sounds/
+  # fonts: (add a thin/light display font here later for the clock face,
+  #  e.g. Google Fonts "Space Mono" or "Inter Tight" — cosmetic, do whenever)
